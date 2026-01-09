@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import AppLayout from '../layouts/AppLayout';
 import Index from '../pages/Index';
-import Contact from '../pages/Contact';
+// import Contact from '../pages/Contact';
+import Project from '../pages/Project';
 
 export default function AppRoutes() {
   return (
@@ -10,7 +11,8 @@ export default function AppRoutes() {
         {/* Pages under MainLayout */}
         <Route element={<AppLayout />}>
           <Route path="/" element={<Index />} />
-          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/project/:id" element={<Project />} />
         </Route>
 
         {/* Direct pages (no layout) */}
